@@ -43,6 +43,7 @@ export class GroqExtractor implements ActionItemExtractor {
           model: process.env.GROQ_MODEL || "openai/gpt-oss-20b",
           temperature: 0,
           max_completion_tokens: 700,
+          reasoning_effort: "low",
           messages: [
             { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: `Meeting notes:\n<notes>\n${note}\n</notes>` },
